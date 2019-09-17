@@ -1,12 +1,19 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"ovly/extensible/controller/BaseController",
+	"ovly/extensible/model/formatter"
+], function (BaseController, Formatador) {
 	"use strict";
 
-	return Controller.extend("ovly.extensible.controller.S1", {
-
+	return BaseController.extend("ovly.extensible.controller.S1", {
+		
+		meuFormatador: Formatador,
+		
 		onInit: function () {
 
+		},
+
+		toUpperCase: function (sName) {
+			return sName.toUpperCase();
 		},
 
 		onItemPress: function (oEvent) {
